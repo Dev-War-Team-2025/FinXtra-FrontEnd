@@ -46,10 +46,11 @@ const Login = () => {
           />
 
           <Button
+           className='bg-green'
             type="submit"
             variant="contained"
             color="primary"
-            backgroundColor="primary"
+            
             fullWidth
             sx={{
               marginTop: 2,

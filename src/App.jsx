@@ -12,7 +12,8 @@ function App() {
     <Router>
       <div>
         <Routes>
-        <Route path="/" element={<Login />} />
+        {/* <Route path="/" element={<Login />} /> */}
+        <Route path="/" element={<FreeNavbar />} />
         <Route path="/sign-up" element={<SignUp />} />
         </Routes>
       </div>
