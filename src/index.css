@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 
 @theme {
   --default-font-family: "Montserrat", "sans-serif";
 
   /* Primary & Secondary - More Green */
-  --color-primary: #0ead69; /* Deep Forest Green */
+  --color-primary: #09ed19; /* Deep Forest Green */
   --color-primary-2: #57cc99; /* Rich Finance Green */
   --color-primary-3: #0c7c59;
   --color-secondary-500: oklch(0.85 0.25 135); /* Fresh Avocado Green */

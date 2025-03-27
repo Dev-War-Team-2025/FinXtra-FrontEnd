@@ -1,24 +1,35 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SignUp from "./pages/SignUp";
-import Login from "./pages/LogIn";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
-import FreeNavbar from "./Dashboard/Freelancer/FreeNavbar";
+// src/App.js
 
+import React from 'react';
+import Header from './components/header';
+import JobCategories from './components/JobCategories';
+import JobListings from './components/JobListings';
+import Testimonials from './components/Testimonials';
+import Footer from './components/Footer';
+import Features from './components/features';
+import HeroSection from './components/heroSection';
+import AboutUs from './components/aboutus';
+import HowItWorks from './components/howItwork';
+import FAQ from './components/faq';
+import CTA from './components/cta';
+//import { Features } from 'tailwindcss';
 
-
-function App() {
+const App = () => {
   return (
-    <Router>
-      <div>
-        <Routes>
-        {/* <Route path="/" element={<Login />} /> */}
-        <Route path="/" element={<FreeNavbar />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="container mx-auto">
+      <Header />
+      <HeroSection />
+      <Features /> 
+      <AboutUs />
+      <Testimonials />
+      <HowItWorks />
+      <CTA />
+      <FAQ />
+      
+     
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;

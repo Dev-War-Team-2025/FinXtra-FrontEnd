@@ -1,0 +1,10 @@
+.overflow-hidden-2 {
+  position: relative;
+  height: 400px; 
+}
+
+.absolute {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
