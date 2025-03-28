@@ -58,22 +58,24 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-16 bg-primary overflow-hidden-2">
-      <div className="container mx-auto text-center">
+    <section className="py-16 bg-primary overflow-hidden">
+      <div className="container mx-auto text-center px-4">
         <h2 className="text-3xl font-bold mb-8 text-white">What Our Users Say</h2>
 
-        <div className="relative w-full ">
-          <div className="absolute flex w-max ">
+        {/* Main container with mask - Added fixed height */}
+        <div className="relative w-full overflow-hidden h-[270px]">
+          {/* Inner scrolling container - Added positioning */}
+          <div className="absolute flex left-0 right-0">
             <motion.div 
               variants={containerVariants}
               animate="animate"
-              className="flex gap-8"
+              className="flex gap-8 pr-8"
             >
               {/* First set of testimonials */}
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={`first-${index}`}
-                  className="w-[350px] flex-shrink-0 bg-white p-6 rounded-lg shadow-lg  hover:shadow-xl transition duration-300"
+                  className="w-[280px] md:w-[320px] flex-shrink-0 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
                 >
                   {/* Star Rating */}
                   <div className="flex justify-center mb-4 space-x-1 ">
@@ -125,7 +127,7 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={`second-${index}`}
-                  className="w-[350px] flex-shrink-0 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+                  className="w-[280px] md:w-[320px] flex-shrink-0 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
                 >
                   {/* Star Rating */}
                   <div className="flex justify-center mb-4 space-x-1">
