@@ -1,22 +1,19 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../../components/Logo";
-import { Settings, Menu, X, UserCircle, Search, CreditCard, Home } from "lucide-react"; // Modern icons
-import { useSelector } from "react-redux"; // Import useSelector
-import profile from "../../assets/profile.jpg"; // Default profile image
+import { Settings, Menu, X, UserCircle } from "lucide-react"; // Modern icons
+import { useSelector } from "react-redux"; // Assuming you're using Redux for state management
 
-const FreeNavbar = () => {
+const ClientNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Accessing the authenticated user from Redux state
-  const { user } = useSelector((state) => state.auth); // Access the user from the Redux state
+  // Get the user data from Redux (or any state management)
+  const user = useSelector((state) => state.auth.user); // Assuming user data is in state.user
 
-  // If no user is authenticated, we can show a default profile image and name
+  // Fallbacks in case user data is not available
   const userName = user ? user.fullName : "Guest";
   const userType = user ? user.userType : "Freelancer"; // Default type as "Freelancer"
-  const userProfilePic = user && user.profileImage ? `http://localhost:5000${user.profileImage}` : profile;
-  console.log(userProfilePic);
- 
+  const userProfilePic = user && user.profileImage ? `http://localhost:5000/${user.profileImage}` : "/assets/profile.jpg"; // Fallback to default image
 
   return (
     <nav className="bg-white shadow-md px-6 sm:px-8 py-4 flex justify-between items-center fixed top-0 left-0 w-full z-50">
@@ -29,29 +26,35 @@ const FreeNavbar = () => {
       <ul className="hidden md:flex space-x-6 text-gray-700 font-semibold text-lg">
         <li>
           <NavLink
-            to="/freelance/findtask"
+            to="/jobowner/posttask"
             className={({ isActive }) =>
-              isActive ? "text-primary font-bold" : "hover:text-primary transition duration-300"
+              isActive
+                ? "text-primary font-bold"
+                : "hover:text-primary transition duration-300"
             }
           >
-            Find Task
+            Post Task
           </NavLink>
         </li>
         <li>
           <NavLink
-            to="/freelance/delivertask"
+            to="/jobowner/makepayments"
             className={({ isActive }) =>
-              isActive ? "text-primary font-bold" : "hover:text-primary transition duration-300"
+              isActive
+                ? "text-primary font-bold"
+                : "hover:text-primary transition duration-300"
             }
           >
-            Deliver Task
+            Make Payments
           </NavLink>
         </li>
         <li>
           <NavLink
-            to="/freelance/wallet"
+            to="/jobowner/wallet"
             className={({ isActive }) =>
-              isActive ? "text-primary font-bold" : "hover:text-primary transition duration-300"
+              isActive
+                ? "text-primary font-bold"
+                : "hover:text-primary transition duration-300"
             }
           >
             Wallet
@@ -66,12 +69,19 @@ const FreeNavbar = () => {
           <span className="text-xs text-primary">{userType}</span>
         </div>
         <div className="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
-          <img src={userProfilePic} className="h-full w-full object-cover" alt="Profile" />
+          <img
+            src={userProfilePic}
+            className="h-full w-full object-cover"
+            alt="Profile"
+          />
         </div>
       </div>
 
       {/* Mobile Menu Button */}
-      <button className="md:hidden text-gray-700" onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className="md:hidden text-3xl text-gray-700"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {isOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
@@ -81,15 +91,18 @@ const FreeNavbar = () => {
           isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
         } transition-all duration-300 md:hidden z-50 flex flex-col items-center pt-20 space-y-6`}
       >
-        <button className="absolute top-4 right-6 text-gray-700" onClick={() => setIsOpen(false)}>
+        <button
+          className="absolute top-4 right-6 text-gray-700"
+          onClick={() => setIsOpen(false)}
+        >
           <X size={32} />
         </button>
 
         <Logo />
 
-        {/* Menu Links with Icons */}
+        {/* Mobile Menu Links with Icons */}
         <NavLink
-          to="/freelance/findtask"
+          to="/jobowner/posttask"
           className={({ isActive }) =>
             isActive
               ? "flex items-center text-lg font-medium hover:text-primary space-x-2 bg-gray-100 py-4 px-30 rounded-md text-primary font-bold"
@@ -97,12 +110,12 @@ const FreeNavbar = () => {
           }
           onClick={() => setIsOpen(false)}
         >
-          <Search size={24} className="text-gray-700" />
-          <span>Find Task</span>
+          <UserCircle size={24} className="text-gray-700" />
+          <span>Post Task</span>
         </NavLink>
 
         <NavLink
-          to="/freelance/delivertask"
+          to="/jobowner/makepayments"
           className={({ isActive }) =>
             isActive
               ? "flex items-center text-lg font-medium hover:text-primary space-x-2 bg-gray-100 py-4 px-26 rounded-md text-primary font-bold"
@@ -110,31 +123,35 @@ const FreeNavbar = () => {
           }
           onClick={() => setIsOpen(false)}
         >
-          <Home size={24} className="text-gray-700" />
-          <span>Deliver Task</span>
+          <UserCircle size={24} className="text-gray-700" />
+          <span>Make Payments</span>
         </NavLink>
 
         <NavLink
-          to="/freelance/wallet"
+          to="/jobowner/wallet"
           className={({ isActive }) =>
             isActive
-              ? "flex items-center text-lg  hover:text-primary space-x-2 bg-gray-100 py-4 px-34 rounded-md text-primary font-bold "
+              ? "flex items-center text-lg font-medium hover:text-primary space-x-2 bg-gray-100 py-4 px-34 rounded-md text-primary font-bold"
               : "flex items-center text-lg font-medium hover:text-primary space-x-2 bg-gray-100 py-4 px-34 rounded-md"
           }
           onClick={() => setIsOpen(false)}
         >
-          <CreditCard size={24} className="text-gray-700" />
+          <UserCircle size={24} className="text-gray-700" />
           <span>Wallet</span>
         </NavLink>
 
         {/* User Info */}
         <div className="flex items-center space-x-3 bg-gray-100 px-4 py-3 rounded-md w-4/5">
           <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary">
-            <img src={userProfilePic} className="w-full h-full object-cover" alt="Profile" />
+            <img
+              src={userProfilePic}
+              className="w-full h-full object-cover"
+              alt="Profile"
+            />
           </div>
           <div>
             <h1 className="text-gray-800 font-semibold">{userName}</h1>
-            <span className="text-gray-500 text-sm">{userType}</span>
+            <span className="text-gray-500 text-sm">Role: {userType}</span>
           </div>
         </div>
       </div>
@@ -142,4 +159,4 @@ const FreeNavbar = () => {
   );
 };
 
-export default FreeNavbar;
+export default ClientNavbar;
