@@ -3,6 +3,8 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import ContactForm from './ContactForm';
+
 
 const Footer = () => {
   return (
@@ -18,10 +20,10 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <motion.li whileHover={{ x: 5 }} className="transition-all duration-200">
-                <a href="#" className="text-gray-300 hover:text-primary">About Us</a>
+                <a href="/about" className="text-gray-300 hover:text-primary">About Us</a>
               </motion.li>
               <motion.li whileHover={{ x: 5 }} className="transition-all duration-200">
-                <a href="#" className="text-gray-300 hover:text-primary">Contact</a>
+                <a href='./ContactForm' className="text-gray-300 hover:text-primary">Contact</a>
               </motion.li>
               <motion.li whileHover={{ x: 5 }} className="transition-all duration-200">
                 <a href="#" className="text-gray-300 hover:text-primary">Privacy Policy</a>
@@ -78,7 +80,7 @@ const Footer = () => {
           {/* Column 4: Copyright */}
           <div className="col-span-1 sm:col-span-2 md:col-span-4 border-t border-gray-700 pt-8 mt-8">
             <div className="text-center text-gray-400">
-              <p>&copy; {new Date().getFullYear()} FinXtra. All Rights Reserved.</p>
+              <p>&copy; {new Date().getFullYear()} AfriTask. All Rights Reserved.</p>
             </div>
           </div>
         </div>

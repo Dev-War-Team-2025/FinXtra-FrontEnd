@@ -13,20 +13,22 @@ const Header = () => {
     navigate('/login');
   };
 
+  const buttonBaseClasses = "w-28 h-9 border-2 rounded-md mr-4 font-medium transition duration-300";
+
   return (
     <header className='bg-white'>
       <nav className="container mx-auto flex justify-between items-center">
         <Logo />
-        <div>
+        <div className="flex items-center">
           <button 
             onClick={handleSignUp}
-            className="bg-primary text-white px-6 py-2 rounded-md mr-4 hover:bg-primary-2 transition"
+            className={`w-28 h-9  rounded-md mr-4 font-medium transition duration-300  bg-primary text-white hover:bg-primary-2 `}
           >
             Sign Up
           </button>
           <button 
             onClick={handleLogin}
-            className="bg-transparent border-2 border-primary text-gray px-6 py-2 rounded-md hover:bg-white hover:text-primary transition"
+            className={`w-28 h-8.5 border-2 rounded-md mr-4 font-medium transition duration-300 border-primary bg-transparent text-gray hover:bg-white hover:text-primary`}
           >
             Login
           </button>

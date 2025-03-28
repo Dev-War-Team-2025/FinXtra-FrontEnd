@@ -38,7 +38,7 @@ const CTA = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
-                href="#signup"
+                href="/signup"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-white text-primary rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 text-center"
@@ -47,7 +47,7 @@ const CTA = () => {
               </motion.a>
               
               <motion.a
-                href="#learn-more"
+                href="/about"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300 text-center"

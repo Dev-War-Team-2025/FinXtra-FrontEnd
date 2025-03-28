@@ -71,7 +71,7 @@ const HeroSection = () => {
             <img 
               src={slide.image} 
               alt={`slide-${index+1}:${slide.title}`} 
-              className="w-full h-[80vh] object-cover bg-gray-500 rounded-lg-3xl" 
+              className="w-full h-[90vh] object-cover bg-gray-500 rounded-lg-3xl" 
               //loading="eager"  
               onError={(e) => {
                 e.target.onerror = null; // Prevent infinite loop

@@ -62,8 +62,8 @@ const Testimonials = () => {
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8 text-white">What Our Users Say</h2>
 
-        <div className="relative w-full">
-          <div className="absolute flex w-max">
+        <div className="relative w-full ">
+          <div className="absolute flex w-max ">
             <motion.div 
               variants={containerVariants}
               animate="animate"
@@ -73,10 +73,10 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={`first-${index}`}
-                  className="w-[350px] flex-shrink-0 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+                  className="w-[350px] flex-shrink-0 bg-white p-6 rounded-lg shadow-lg  hover:shadow-xl transition duration-300"
                 >
                   {/* Star Rating */}
-                  <div className="flex justify-center mb-4 space-x-1">
+                  <div className="flex justify-center mb-4 space-x-1 ">
                     {Array.from({ length: testimonial.rating }, (_, i) => (
                       <svg
                         key={i}

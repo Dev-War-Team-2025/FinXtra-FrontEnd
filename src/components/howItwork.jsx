@@ -21,7 +21,7 @@ const HowItWorks = () => {
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white p-10 rounded-3xl shadow-2xl hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transition-all duration-300"
+            className="bg-white p-10 rounded-3xl shadow-2xl hover:shadow-[0_20px_50px_rgba(9,_237,_25,_1)] transition-all duration-300"
           >
             <div className="flex flex-col items-center mb-8 text-center">
               <div className="text-6xl bg-gradient-to-br from-primary/20 to-primary/10 p-6 rounded-2xl mb-4">
@@ -52,7 +52,7 @@ const HowItWorks = () => {
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white p-10 rounded-3xl shadow-2xl hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transition-all duration-300"
+            className="bg-white p-10 rounded-3xl shadow-2xl hover:shadow-[0_20px_50px_rgba(9,_237,_25,_1)] transition-all duration-300"
           >
             <div className="flex flex-col items-center mb-8 text-center">
               <div className="text-6xl bg-gradient-to-br from-primary/20 to-primary/10 p-6 rounded-2xl mb-4">

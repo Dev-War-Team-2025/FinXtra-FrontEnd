@@ -12,6 +12,7 @@ import MakePayments from "./Dashboard/JobOwner/pages/MakePayments";
 import Login from "./pages/Login";
 import PaymentSuccesPage from "./pages/PaymentSuccesPage";
 import ForgotPassword from './pages/forgetpassword';
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   const user = useSelector((state) => state.auth?.user); // Get authenticated user
@@ -32,6 +33,7 @@ function App() {
 
       <Routes>
         {/* Public Routes (No margin-top applied) */}
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/success" element={<PaymentSuccesPage />} />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
