@@ -2,8 +2,6 @@
 
 import React from 'react';
 import Header from './components/header';
-import JobCategories from './components/JobCategories';
-import JobListings from './components/JobListings';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Features from './components/features';
