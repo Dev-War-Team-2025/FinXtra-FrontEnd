@@ -5,7 +5,7 @@ import { Mail, Lock, User, Phone, Image } from "lucide-react";
 import { BsGoogle } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import img from "../assets/woman.jpg";
+import img from "../assets/hero3.jpeg";
 import Logo from "../components/Logo";
 
 const SignUp = () => {
@@ -243,7 +243,7 @@ const SignUp = () => {
           {/* Login Link */}
           <p className="text-center mt-6 text-gray-600">
             Already have an account?{" "}
-            <a href="#" className="text-primary hover:underline">
+            <a href="/login" className="text-primary hover:underline">
               Login
             </a>
           </p>
