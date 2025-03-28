@@ -12,14 +12,13 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^6.4.8",
     "@mui/icons-material": "^7.0.0",
     "@mui/material": "^7.0.0",
     "@tailwindcss/vite": "^4.0.14",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.21",
-    "framer-motion": "^12.6.2",
     "axios": "^1.8.4",
+    "framer-motion": "^12.6.2",
     "lucide-react": "^0.484.0",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
@@ -28,10 +27,10 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.4.0",
     "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.6",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.6",
     "tailwindcss": "^4.0.14"
   },
   "devDependencies": {
