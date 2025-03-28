@@ -1,12 +1,18 @@
 import React from 'react';
 import Slider from 'react-slick'; // Import the slider component
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import hero1 from '../assets/hero1.jpeg';
 import hero2 from '../assets/hero2.jpeg';
 import hero3 from '../assets/hero3.jpeg';
 
-
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleSignUp = () => {
+    navigate('/signup');
+  };
+
   // Array of images and text information for the slider
   const slides = [
     {
@@ -97,6 +103,7 @@ const HeroSection = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
                 className="mt-8 bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-2 transition"
+                onClick={handleSignUp}
               >
                 Sign Up Now
               </motion.button>

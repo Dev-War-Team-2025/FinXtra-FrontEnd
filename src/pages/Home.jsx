@@ -19,7 +19,6 @@ const Home = () => {
       <Header />
       <HeroSection />
       <Features /> 
-      <Navbar />
       <AboutUs />
       <Testimonials />
       <HowItWorks />

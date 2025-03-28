@@ -11,6 +11,7 @@ import PostTask from "./Dashboard/JobOwner/pages/PostTask";
 import MakePayments from "./Dashboard/JobOwner/pages/MakePayments";
 import Login from "./pages/Login";
 import PaymentSuccesPage from "./pages/PaymentSuccesPage";
+import ForgotPassword from './pages/forgetpassword';
 
 function App() {
   const user = useSelector((state) => state.auth?.user); // Get authenticated user
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/forgetpassword" element={<ForgotPassword />} />
       </Routes>
 
       {/* Protected Routes (Wrapped in div with mt-16) */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import freelancer from '../assets/hero2.jpeg'
+import freelancer from '../assets/hero4.jpeg'
 const CTA = () => {
   return (
     <section className="relative py-24 overflow-hidden bg-primary">
